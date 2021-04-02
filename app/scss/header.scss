@@ -36,12 +36,23 @@
             font-weight: normal;
             font-size: 14px;
             line-height: 21px;
+            transition: .3s all ease;
+
+            &:hover {
+                color: $text-blue;
+            }
         }
     }
 }
 
 @media (max-width: 769px) {
     .header {
+        height: 52px;
+
+        &-inner {
+            height: 52px;
+        }
+
         &-burger {
             display: block;
             position: relative;
@@ -116,6 +127,10 @@
 
             &__item {
                 margin-bottom: 40px;
+
+                &:not(:first-child) {
+                    margin-left: 0;
+                }
             }
 
             &__link {
@@ -135,5 +150,16 @@
             }
         }
 
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        &-menu {
+            &__link {
+                font-size: 26px;
+                line-height: 28px;
+            }
+        }
     }
 }
