@@ -1,0 +1,26 @@
+@import 'variable';
+@import 'reset';
+@import 'header';
+
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Rubik';
+
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: 1176px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
