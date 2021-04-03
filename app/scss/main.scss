@@ -1,0 +1,137 @@
+.main {
+    min-height: 740px;
+    width: 100%;
+    background: url('../images/main-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &-inner {
+        width: 100%;
+        min-height: 740px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &-text {
+        color: $text-black;
+        width: 100%;
+
+        &__subtitle {
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 26px;
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            font-weight: bold;
+            font-size: 74px;
+            line-height: 88px;
+            margin-bottom: 5px;
+        }
+
+        &__description {
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 62px;
+        }
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &__link {
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            padding: 18px 48px;
+            background-color: $bg-blue;
+            border-radius: 4px;
+            transition: .3s all ease;
+
+            >img {
+                margin-left: 8px;
+                transition: .3s all ease;
+            }
+
+            &:hover>img {
+                margin-left: 14px;
+                transition: .3s all ease;
+            }
+        }
+
+        &__text {
+            position: relative;
+            margin-left: 60px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url('../images/people.svg');
+                left: -47px;
+                top: -4px;
+                width: 40px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 769px) {
+    .main {
+
+        background-position: left left;
+
+        &-button {
+            flex-direction: column;
+
+            &__link {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 505px) {
+    .main {
+        min-height: 540px;
+
+        &-inner {
+            min-height: 540px;
+        }
+
+        &-text {
+            &__subtitle {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 21px;
+                margin-bottom: 10px;
+            }
+
+            &__title {
+                font-weight: bold;
+                font-size: 58px;
+                line-height: 108.9%;
+                margin-bottom: 5px;
+            }
+
+            &__description {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 102px;
+            }
+        }
+    }
+}
