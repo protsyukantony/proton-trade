@@ -1,8 +1,8 @@
 .get {
     max-width: 100%;
-    min-height: 1140px;
+    min-height: 1000px;
     color: $text-black;
-    padding: 100px 0;
+    padding-top: 100px;
 
     &-inner {
         display: flex;
@@ -56,6 +56,8 @@
 
 @media (max-width: 769px) {
     .get {
+        padding-bottom: 50px;
+
         &-card {
             display: flex;
             flex-direction: column;
