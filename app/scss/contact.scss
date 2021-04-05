@@ -1,0 +1,147 @@
+.contact {
+    max-width: 100%;
+    min-height: 450px;
+    background-color: $bg-gray;
+    color: $text-black;
+    padding-top: 100px;
+
+    &-inner {
+        min-height: 578px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &-text {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title {
+            font-weight: bold;
+            font-size: 42px;
+            line-height: 50px;
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &-form {
+        width: 66%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        input,
+        textarea {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            background: #EDEEEF;
+            border: 1px solid #E3E5E6;
+            border-radius: 4px;
+            padding: 24px;
+            font-family: 'Rubik';
+        }
+
+        label {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 24px;
+            color: #808080;
+        }
+
+        &__name {
+            width: 48%;
+            min-height: 65px;
+        }
+
+        &__email {
+            width: 48%;
+            min-height: 65px;
+        }
+
+        &__text {
+            width: 100%;
+            height: 169px;
+            resize: none;
+            margin-bottom: 12px;
+        }
+
+        &__button {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            background-color: $bg-blue;
+            border: none;
+            color: #fff;
+            align-self: flex-start;
+            padding: 18px 60px;
+            border-radius: 4px;
+        }
+    }
+
+    &-input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 769px) {
+    .contact {
+        padding-top: 50px;
+
+
+        &-inner {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+
+        &-text {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        &-form {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contact {
+        &-text {
+            &__title {
+                font-size: 40px;
+                line-height: 47px;
+            }
+        }
+
+        &-form {
+
+            &__name,
+            &__email,
+            &__button {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+    }
+}
